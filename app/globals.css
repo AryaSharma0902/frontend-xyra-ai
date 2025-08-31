@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Open Sans', system-ui, sans-serif;
+  }
+  
+  body {
+    @apply bg-white dark:bg-black text-black dark:text-white transition-colors duration-300;
+  }
+}
+
+@layer components {
+  .xyra-input {
+    @apply w-full px-4 py-3 bg-white dark:bg-black border border-gray-300 dark:border-gray-600 rounded-5 text-black dark:text-white placeholder-gray-500 dark:placeholder-gray-400;
+    transition: border-color 0.3s ease;
+  }
+  
+  .xyra-input:focus {
+    @apply outline-none;
+  }
+  
+  .xyra-input:focus {
+    border-color: #8a8a8a;
+  }
+  
+  .dark .xyra-input:focus {
+    border-color: #ffffff;
+  }
+  
+  .xyra-button {
+    @apply px-4 py-2 bg-black dark:bg-white text-white dark:text-black rounded-5 hover:bg-gray-800 dark:hover:bg-gray-200 transition-all duration-200 font-medium shadow-sm;
+  }
+  
+  .xyra-button-secondary {
+    @apply px-4 py-2 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200 rounded-5 hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-200 font-medium shadow-sm;
+  }
+  
+  .xyra-card {
+    @apply bg-white dark:bg-black border border-gray-200 dark:border-gray-600 rounded-5 shadow-sm;
+  }
+}
+
+@layer utilities {
+  /* Hide scrollbar but keep functionality */
+  .scrollbar-hide {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;  /* Safari and Chrome */
+  }
+}
